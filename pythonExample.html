@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Java Programming Assignments</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #080808;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .app-gallery {
+            padding: 80px 0;
+            background: #080808;
+        }
+
+        .app-gallery h1 {
+            font-size: 60px;
+            padding-bottom: 80px;
+            text-align: center;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 80px;
+        }
+
+        .gallery-grid img {
+            width: 90%;
+            height: 500px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            background: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        .screenshot-placeholder {
+            width: 90%;
+            height: 500px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            background: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .screenshot-placeholder:hover {
+            transform: scale(1.05);
+        }
+
+        .code-section {
+            margin-top: 60px;
+            padding: 40px 0;
+        }
+
+        .code-section h2 {
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .assignment-code {
+            background: #1a1a1a;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+
+        .code-header {
+            background: #2d2d2d;
+            padding: 20px;
+            border-bottom: 1px solid #333;
+        }
+
+        .code-header h3 {
+            margin: 0 0 10px 0;
+            color: #00ff88;
+            font-size: 24px;
+        }
+
+        .code-header p {
+            margin: 0;
+            color: #ccc;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .code-container {
+            max-height: 400px;
+            overflow-y: auto;
+            background: #0d1117;
+        }
+
+        .code-block {
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #e6edf3;
+            white-space: pre;
+            margin: 0;
+        }
+
+        .code-container::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .code-container::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+
+        .code-container::-webkit-scrollbar-thumb {
+            background: #444;
+            border-radius: 4px;
+        }
+
+        .code-container::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app-gallery">
+        <div class="container">
+            <h1>Python Applications</h1>
+            <div class="code-section">
+                <div class="container">
+
+
+                    <div class="assignment-code">
+                        <div class="code-header">
+                            <h3>Assignment 1: Car Rental Cost Calculator</h3>
+                            <p>This Java program uses JOptionPane to create a GUI-based car rental cost calculator. It
+                                calculates rental costs for three car types (Compact $30.50/day, Sedan $50/day, SUV
+                                $80.96/day) with different time periods (Day, Week with 15% discount, Month with 30%
+                                discount). The program uses nested switch statements for logic control and Math.round()
+                                for cost display.</p>
+                        </div>
+                        <div class="code-container">
+                            <pre class="code-block">import javax.swing.*;
+import java.text.*;
+
+public class Assignmen_3 {
+
+    public static void main(String[] args) {
+        Integer cartype = Integer
+                .parseInt(JOptionPane.showInputDialog(null, "For compact-1\nFor sedan-2\nFor SUV-3", "1,2 or 3"));
+        Integer time = Integer
+                .parseInt(JOptionPane.showInputDialog(null, "For Day-1\nFor Week-2\nFor Month-3", "1,2 or 3"));
+        switch (cartype) {
+        case 1:
+            switch (time) {
+            case 1:
+                double c_d = 30.50;
+                JOptionPane.showMessageDialog(null, "total cost:$" + Math.round(c_d));
+                break;
+            case 2:
+                double c_w = 30.50*7*(1-0.15);
+                JOptionPane.showMessageDialog(null, "total cost:$" +Math.round(c_w));
+                break;
+            case 3:
+                double c_m = 30.50*30*(1-0.30);
+                JOptionPane.showMessageDialog(null, "total cost:$" + Math.round(c_m));
+                break;
+            default :
+                JOptionPane.showMessageDialog(null,"You didn't enter 1,2 or 3 for 2 nd question");
+                break;
+            }
+            break;
+        case 2:
+            switch (time) {
+            case 1:
+                double s_d = 50;
+                JOptionPane.showMessageDialog(null, "total cost:$" + Math.round(s_d));
+                break;
+            case 2:
+                double s_w = 50*7*(1-0.15);
+                JOptionPane.showMessageDialog(null, "total cost:$" + Math.round(s_w));
+                break;
+            case 3:
+                double s_m = 50*30*(1-0.30);
+                JOptionPane.showMessageDialog(null, "total cost:$" + Math.round(s_m));
+                break;
+            default :
+                JOptionPane.showMessageDialog(null,"You didn't enter 1,2 or 3 for 2 nd question");
+                break;
+            }
+            break;
+        case 3:
+            switch (time) {
+            case 1:
+                double S_d = 80.96;
+                JOptionPane.showMessageDialog(null, "total cost:$" + Math.round(S_d));
+                break;
+            case 2:
+                double S_w = 80.96*7*(1-0.15);
+                JOptionPane.showMessageDialog(null, "total cost:$" + Math.round(S_w));
+                break;
+            case 3:
+                double S_m = 80.96*30*(1-0.30);
+                JOptionPane.showMessageDialog(null, "total cost:$" + Math.round(S_m));
+                break;
+            default :
+                JOptionPane.showMessageDialog(null,"You didnt enter 1,2 or 3 for 2 nd question");
+                break;
+            }
+            break;
+        default:
+            JOptionPane.showMessageDialog(null, "You didn't enter 1,2 or 3");
+        }
+    }
+
+}</pre>
+                        </div>
+                    </div>
+
+                    <div class="assignment-code">
+                        <div class="code-header">
+                            <h3>Assignment 2: Student Attendance & Assignment Checker</h3>
+                            <p>This console-based Java program validates student eligibility for exams. It calculates
+                                attendance percentage from total and attended classes, validates assignment scores, and
+                                checks if students meet exam criteria (75% minimum attendance and 50+ assignment score).
+                                The program also verifies the accuracy of manually entered total assignment scores.</p>
+                        </div>
+                        <div class="code-container">
+                            <pre class="code-block">import java.util.Scanner;
+
+public class Assignment_1 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Total number of classes:");
+        double tnc = input.nextInt();
+        System.out.print("Number of classes attended:");
+        double nac = input.nextInt();
+        System.out.print("Score of 1 assignment:");
+        double asg1 = input.nextDouble();
+        System.out.print("Score of 2 assignment:");
+        double asg2 = input.nextDouble();
+        System.out.print("Score of 3 assignment:");
+        double asg3 = input.nextDouble();
+        System.out.print("Score of total assignment:");
+        double total = input.nextDouble();
+        
+        //calculation start
+        double attendence = nac/tnc*100;
+        double Total = asg1 +asg2 + asg3;
+        
+        if (Total == total)
+            if (attendence < 75.0) {
+                System.out.print("You can't enter to exam with less than 75% attedence");
+            } else if (total < 50) {
+                System.out.print("You can't enter exam to exam with less than 50 score of assignment");
+            } else {
+                System.out.print("You can enter exam kudos!");
+            }
+        else {
+            System.out.print("You total score of assignment is not true!");
+        }
+        
+        input.close();
+    }
+}</pre>
+                        </div>
+                    </div>
+
+
+                    <div class="assignment-code">
+                        <div class="code-header">
+                            <h3>Assignment 3: Basic Calculator Application</h3>
+                            <p>This console calculator performs five arithmetic operations (addition, subtraction,
+                                multiplication, division, remainder) using a switch-case menu system. It includes proper
+                                error handling for division by zero scenarios and uses double precision for accurate
+                                calculations. The program provides user-friendly operation selection and graceful exit
+                                functionality.</p>
+                        </div>
+                        <div class="code-container">
+                            <pre class="code-block">import java.util.Scanner;
+
+public class Assinment_2 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter num 1:");
+        double num_1 = input.nextDouble();
+        System.out.print("Enter num 2:");
+        double num_2 = input.nextDouble();
+        System.out.print(
+                "For addition:1\nFor substraction:2\nFor multiplication:3\nFor division:4\nFor remainder:5\nEnter number:");
+        int operation = input.nextInt();
+        
+        switch (operation) {
+        case 1:
+            double addition = num_1 + num_2;
+            System.out.print("Answer:" + addition);
+            break;
+        case 2:
+            double substraction = num_1 - num_2;
+            System.out.print("Answer:" + substraction);
+            break;
+        case 3:
+            double multipiclation = num_1 * num_2;
+            System.out.print("Answer:" + multipiclation);
+            break;
+        case 4:
+            if (num_2 == 0) {
+                System.out.print("Error!!!");
+            } else {
+                double divison = num_1 / num_2;
+                System.out.print("Answer:" + divison);
+            }
+            break;
+        case 5:
+            if (num_2 == 0) {
+                System.out.print("Error!!!");
+            } else {
+                double remainder = num_1 % num_2;
+                System.out.print("Answer:" + remainder);
+            }
+            break;
+        default:
+            System.out.print("Bye");
+            break;
+        }
+    }
+}</pre>
+                        </div>
+                    </div>
+
+
+                    <div class="assignment-code">
+                        <div class="code-header">
+                            <h3>Python Practical 1: Basic Calculations</h3>
+                            <p>Collection of Python programs covering basic mathematical calculations including test
+                                score averaging, currency conversion, physics calculations (momentum, kinetic energy),
+                                geometry (rectangle, sphere), and financial calculations (bills, wages) with proper
+                                formatting and user input handling.</p>
+                        </div>
+                        <div class="code-container">
+                            <pre class="code-block">import math
+
+# Practice 1.1 - Test Score Average
+b=0;
+for i in range(1,6):
+    a=int(input(f"Enter {i} test score:"));
+    b=a+b;
+    print(b)
+c=b/5
+print("Your avg score is ",c)
+
+# Practice 1.2 - Currency Converter
+rm=float(input("Enter amount that you want to change:"));
+sgd=rm/3.04;
+print(f"You have {sgd:.2f} SGD");
+
+# Practice 1.3 - Light Year Calculator
+value=float(input("Enter value for calculate value of light year"));
+speed_l=3.0e8;
+speed_l_year=365*24*60*60;
+calc=speed_l*speed_l_year;
+print(f'Distance is: {calc:.2f} meters in one year')
+
+# Practice 1.4 - Rectangle Calculator
+lenght=float(input('Enter lenght of rectangle:'));
+height=float(input('Enter height of rectangle:'));
+area=lenght*height
+perimter=2*(lenght+height)
+print(f"Perimter:{perimter:.2f}, area:{area:.2f} of rectabgle")
+
+# Practice 1.5 - Physics Calculator
+mass=float(input('Enter mass of object:'));
+velocity=float(input('Enter velocity of object:'));
+momentum=mass*velocity
+kinetic_e=0.5*(mass*velocity**2);
+print(f"Momentum:{momentum:.2f} m/s, kinetic energy:{kinetic_e:.2f} J");
+
+# Practice 1.6 - Sphere Calculator
+sphere_r=int(input("Enter radius of a sphere:"));
+diamter=2*sphere_r
+circumference=2*math.pi*sphere_r
+surface_area=4*math.pi*sphere_r**2
+volume=(4/3)*math.pi*sphere_r**3
+print(f"diamter:{diamter:.2f}, circumference:{circumference:.2f},surface_area:{surface_area:.2f},volume:{volume:.2f}");
+
+# Practice 1.7 - Bill Calculator
+total_b=float(input("Enter total amount of the bill:"));
+num_p=float(input("Enter number of people:"));
+service=total_b*0.10;
+total_w_service=total_b+service;
+gst=total_b*0.06;
+final_b=total_w_service+gst;
+per_person=final_b/num_p;
+print(f"Per person bill is: {per_person:.2f}");
+
+# Practice 1.8 - Wage Calculator
+hourly_w=float(input("Enter hourly wage:"));
+total_regular_h=float(input("Enter total regular hours:"));
+total_overtime_h=float(input("Enter total overtime hours:"));
+overtime_pay=total_overtime_h*(1.5*hourly_w);
+weekly_pay=(hourly_w*total_regular_h)+overtime_pay;
+print(f"your weekly pay is: {weekly_pay:.2f}")</pre>
+                        </div>
+                    </div>
+
+
+                    <div class="assignment-code">
+                        <div class="code-header">
+                            <h3>Python Practical 2: Conditional Logic & Decision Making</h3>
+                            <p>Python programs demonstrating conditional statements, if-else logic, and match-case
+                                statements. Includes video rental pricing, time conversion, tax calculation based on
+                                income brackets, data usage charges, area calculations for different shapes, and a
+                                coffee menu system.</p>
+                        </div>
+                        <div class="code-container">
+                            <pre class="code-block">import math
+
+# Practical 2.1 - Video Rental Cost
+new_v_p=3;
+old_v_p=2;
+cus_new_v=int(input("Enter amount of new videos:"));
+cus_old_v=int(input("Enter amount of old videos:"));
+total=int((cus_new_v*new_v_p)+(cus_old_v*old_v_p));
+print(f"Total cost is: {total} $");
+
+# Practical 2.2 - Time Converter
+time=int(input("Enter seconds you want to convert:"));
+hour=time//3600;
+minutes=(time%3600)//60;
+sec=time%60;
+print(f"{hour}:{minutes}:{sec}");
+
+# Practical 2.3 - Tax Calculator
+income=int(input("Enter your yearly income:"));
+if (0<income<=2500):
+    print("No tax:");
+elif (2500<income<=10000):
+    tax_5= income*0.5;
+    print(f"Total tax is:{tax_5}");
+elif (10000<income<=50000):
+    tax_15= income*0.15;
+    print(f"Total tax is:{tax_15}");
+else:
+    tax_25=income*0.25;
+    print(f"Total tax is:{tax_25}");
+
+# Practical 2.4 - Data Usage Charges
+monthly_data=int(input("Enter monthly data usage(in GB):"));
+if (monthly_data<=10):
+    charge_f=monthly_data*15;
+    print(f"Your data charge is:{charge_f}");
+else:
+    charge_a=((monthly_data-10)*30)+(10*15);
+    print(f"Your data charge is:{charge_a}");
+
+# Practical 2.5 - Area Calculator
+type=input("For rectangle R or r\nFor circule C or c\nEnter your choice:");
+if (type == "R" or type== "r"):
+    lenght=float(input("Enter lenght of rectangle"));
+    height=float(input("Enter height of rectangle"));
+    rectangle=lenght*height
+    print(f"The area of rectangle is:{rectangle:.2f}");
+elif (type == "C" or type== "c"):
+    radius=float(input("Enter radius of circle:"));
+    circle=math.pi*radius**2;
+    print(f"The area of circle is:{circle:.2f}");
+else:
+    print("You did not enter right letter");
+
+# Practical 2.6 - Coffee Menu
+def get_day_name(day):
+    match day:
+        case 1: return "Peppermint Mocha"
+        case 2: return " Candy Bar Latte"
+        case 3: return "Caramel Coffee"
+        case 4: return "Chocolate Almond Cafe Au Lait"
+        case 5: return "Pumpkin-Chai Latte"
+        case 6: return "Vanilla Chai Tea"
+        case 7: return "Gingerbread Latte"
+        case _: return "Invalid day"
+
+day_num=int(input("Enter number of the day:"));
+print(get_day_name(day_num))</pre>
+                        </div>
+                    </div>
+
+
+                    <div class="assignment-code">
+                        <div class="code-header">
+                            <h3>Python Practical 4: While Loops & Iteration</h3>
+                            <p>Python programs focusing on while loop constructs, iteration control, and interactive
+                                applications. Features counting loops, power calculations, sum accumulators, and a
+                                number guessing game with user feedback and attempt tracking.</p>
+                        </div>
+                        <div class="code-container">
+                            <pre class="code-block"># Practice 4.1 - Basic While Loop
+i=0
+print("Starting");
+while i<10:
+    print(i, end=" ");
+    i+=1;
+print("\nDone");
+
+# Practice 4.2 - Negative Counter
+i=-20;
+print("Starting");
+while i<0:
+    print(i, end=" ");
+    i+=2;
+print("\nDone");
+
+# Practice 4.3 - Power Calculator
+a=int(input("Enter num a:"));
+b=int(input("Enter num b:"));
+c=a**b
+print(f"Answer is {c}");
+
+# Practice 4.4 - Sum Accumulator
+total=0;
+d="DONE";
+while True:
+    user=input("Enter number(or write DONE for stop):");
+    if (user =="DONE"):
+        print(f"Total is:{total}");
+        break;
+    else:
+        total+=int(user);
+
+# Practice 4.5 - Guessing Game
+secret_num=50;
+attemps=0;
+while True:
+    guess=int(input("Enter number:"));
+    attemps += 1;
+
+    if(guess > secret_num):
+        print("You are too high");
+    elif(guess < secret_num):
+        print("You are too low");
+    else:
+        print(f"Well done, you took {attemps} attemps");
+        break;</pre>
+                        </div>
+                    </div>
+
+
+                    <div class="assignment-code">
+                        <div class="code-header">
+                            <h3>Python Practical 5: Advanced Loops & Pattern Generation</h3>
+                            <p>Advanced Python programs with complex loop structures, nested loops, and pattern
+                                generation. Includes an enhanced guessing game with replay functionality, multiplication
+                                tables, binary pattern display, and comprehensive temperature conversion with range
+                                validation.</p>
+                        </div>
+                        <div class="code-container">
+                            <pre class="code-block">import random
+
+# Practice 5.1 - Advanced Guessing Game
+secret_num=random.randint(1,200);
+attemps=0;
+while True:
+    guess=int(input("Enter number:"));
+    attemps += 1;
+
+    if(guess > secret_num):
+        print("You are too high");
+    elif(guess < secret_num):
+        print("You are too low");
+    elif (guess == secret_num):
+        print(f"Well done, you took {attemps} attemps");
+        user=input("Do you want play again(Yes/No):")
+        if (user == "Yes" or user == "yes"):
+                attemps= 0;
+                continue;
+        elif (user == "No" or user == "no"):
+                print("Bye bye!");
+                break;
+
+# Practice 5.2 - Multiplication Table
+num1=int(input("Which multiplication table woud you like to print:"));
+num2=int(input("How high you would like it to go?:"));
+for i in range(1,num2+1):
+    times=num1*i;
+    print(f"{num1} times {i} = {times}");
+
+# Practice 5.4 - Temperature Converter
+while True:
+    print("Temperature Conversion Programme.\n[1] Convert Celsius to Fahrenheit.\n[2] Convert Fahrenheit to Celsius.")
+    user=int(input("Enter your selection, 1 or 2:"));
+    
+    if user == 1:
+        print("Celsius (C) to Fahrenheit (F) Conversion")
+    elif user == 2:
+        print("Fahrenheit (F) to Celsius (C) Conversion")
+    else:
+        print("ERROR: Invalid Selection");
+        
+    minimum=int(input("Enter minimum temperature:"));
+    maximum=int(input("Enter maximum temperature:"));
+    
+    if minimum > maximum:
+        print("ERROR: Invalid Input!");
+    elif user == 1:
+        for i in range(minimum,maximum+1):
+            answer=(i * 9/5) +32;
+            print(f"{i}C = {answer:.1f}F");
+    else:
+        for i in range(minimum,maximum+1):
+            answer=(i - 32) * 5/9;
+            print(f"{i}F = {answer:.1f}C");
+
+    print("Conversion Done!");
+    again=input("Do you want to run the program again? [Y/N]:");
+    if again == "N" or again == "n":
+        print("Bye!");
+        break;</pre>
+                        </div>
+                    </div>
+
+
+                    <div class="assignment-code">
+                        <div class="code-header">
+                            <h3>Python Practical 6: List Operations & Data Manipulation</h3>
+                            <p>Python programs demonstrating list operations, data manipulation, and various sorting
+                                techniques. Covers list creation, statistical calculations, built-in and manual sorting
+                                algorithms, and selective element deletion with different criteria.</p>
+                        </div>
+                        <div class="code-container">
+                            <pre class="code-block"># Practice 6.1 - Basic List Input
+my_list=[];
+i=0;
+while i<5:
+    i += 1;
+    user=float(input("Enter number:"));
+    my_list.append(user);
+print(f"my list = {my_list}");
+
+# Practice 6.2 - List Statistics
+my_list=[];
+i=0;
+total=0;
+while i<5:
+    i += 1;
+    user=float(input("Enter number:"));
+    total += user;
+    my_list.append(user);
+print(f"my list = {my_list}");
+print(f"Total = {total}");
+print(f"Avg = {total/i}");
+
+# Practice 6.3 - List Sorting
+forward_list=[];
+i=0;
+while i<5:
+    i += 1;
+    user=int(input("Enter number:"));
+    forward_list.append(user);
+    forward_list.sort();
+print(f"Forward list = {forward_list}");
+forward_list.reverse();
+print(f"Reverse list = {forward_list}");
+
+# Practice 6.4 - Manual Bubble Sort
+my_list=[];
+i=0;
+while i<5:
+    i += 1;
+    user=int(input("Enter number:"));
+    my_list.append(user);
+
+for i in range(0,len(my_list)):
+    for j in range(i+1,len(my_list)):
+        if my_list[i] > my_list[j]:
+            my_list [i],my_list[j] = my_list [j],my_list[i]
+
+for i in range (5):
+    print(f"my_list = {my_list}");
+    del(my_list[-1])
+
+# Practice 6.6 - Selective Deletion
+my_list=[];
+i=0;
+while i<5:
+    i += 1;
+    user=input("Enter data:");
+    my_list.append(user);
+
+for i in range (len(my_list)-1,-1,-1):
+    print(f"my_list = {my_list}");
+    if i % 2 == 0:
+        del(my_list[i])
+print(f"my_list = {my_list}")</pre>
+                        </div>
+                    </div>
+
+
+                    <div class="assignment-code">
+                        <div class="code-header">
+                            <h3>Python Practical 7: For Loops & Interactive Applications</h3>
+                            <p>Python programs utilizing for loop constructs for various applications including
+                                multiplication tables, countdown timers, directional counting, random math quizzes with
+                                scoring systems, and list analysis for finding minimum and maximum values.</p>
+                        </div>
+                        <div class="code-container">
+                            <pre class="code-block">import random;
+
+# Practice 7.1 - Multiplication Table
+user = int(input('Enter number between 1 and 12:'));
+for i in range(1,11):
+    print(f"{user} * {i} = {user * i}");
+
+# Practice 7.2 - Countdown
+user = int(input('Enter number below 50:'));
+for i in range(user,-1,-1):
+    print(i);
+
+# Practice 7.3 - Direction Counter
+user = int(input("Which direction do you want to count\n[1]Up\n[2]Down\nEnter 1 or 2:"))
+if user == 1:
+    up = int(input("Enter top number:"));
+    for i in range(1,up+1):
+        print(i);
+elif user == 2:
+    down = int(input("Enter number below 20:"));
+    for i in range(20,down-1,-1):
+        print(i);
+
+# Practice 7.4 - Math Quiz (5 questions)
+correct = 0;
+for i in range(5):
+    a=random.randint(1,1000);
+    b=random.randint(1,1000);
+    total=(a+b)
+    user=int(input(f"{a} + {b} ="));
+    if user == total:
+        correct += 1;
+print(f"You got {correct} correct out of five")
+
+# Practice 7.5 - Endless Math Quiz
+correct = 0;
+while True:
+    a=random.randint(1,1000);
+    b=random.randint(1,1000);
+    total=(a+b)
+    user=int(input(f"{a} + {b} = "));
+    if user == total:
+        correct += 1;
+    print(f"You got {correct} correct");
+    again = input("Do you want play again[Y/N]:");
+    if again == "Y" or again == "y":
+          continue;
+    elif again == "N" or again == "n":
+        print("Bye bye!");
+        break;
+
+# Practice 7.6 - List Min/Max Finder
+my_list = [];
+for i in range(10):
+    num=float(input("Enter a number:"));
+    my_list.append(num);
+
+print(f"my_list = {my_list}");
+print(f"Maximum number = {max(my_list)}");
+print(f"Minimum number = {min(my_list)}");</pre>
+                        </div>
+                    </div>
+
+
+                    <div class="assignment-code">
+                        <div class="code-header">
+                            <h3>Python Practical 8: Functions & Modular Programming</h3>
+                            <p>Python programs demonstrating function definition, parameter passing, and return values.
+                                Features modular programming with functions for number processing, random number
+                                generation, mathematical operations, input validation, and list analysis with proper
+                                function organization.</p>
+                        </div>
+                        <div class="code-container">
+                            <pre class="code-block">import random 
+
+# Practice 8.1 - Number Counter Function
+def num_count():
+    num=int(input("Enter number:"));
+    return num+1
+
+top_num= num_count();
+for i in range(1,top_num):
+    print(i);
+
+# Practice 8.2 - Random Number Generator
+def random_number_generator():
+    low=int(input("Enter the low number:"));
+    high=int(input("Enter the high number:"));
+    comp_num=random.randint(low,high);
+    return comp_num
+
+def guess_num():
+    guess=int(input("I am thinking of a number try to guess it:"));
+    return guess
+
+# Practice 8.3 - Math Operations with Functions
+def addition():
+    num1=random.randint(5,20);
+    num2=random.randint(5,20);
+    total=num1+num2
+    answer=(f'{num1} + {num2} = ');
+    return answer, total
+
+def subtraction():
+    num1=random.randint(5,20);
+    num2=random.randint(25,50);
+    total=num1-num2
+    answer=(f'{num1} - {num2} = ');
+    return answer, total
+
+def checker(user_answer, total):
+    if user_answer == total:
+        print('You are right');
+    else:
+        print(f'You are wrong correct answer is {total}');
+        
+def main():
+    calculation=int(input("[1]Addition\n[2]Subtraction\nEnter 1 or 2:"));
+    if calculation == 1:
+        answer,total = addition();
+        user_answer=int(input(answer)); 
+        checker(user_answer,total);
+    elif calculation == 2:
+        answer,total = subtraction();
+        user_answer=int(input(answer));    
+        checker(user_answer,total);
+    else:
+        print("Invalid Input")
+main()
+
+# Practice 8.4 - List Analysis Functions
+def read_num(total_num_to_read):
+    user_list = [];
+    for i in range(total_num_to_read):
+        user_input=float(input('Enter number:'));
+        user_list.append(user_input);
+    return user_list
+
+def find_min_num(user_list):
+    min_num=min(user_list);
+    return min_num
+
+def find_max_num(user_list):
+    max_num=max(user_list);
+    return max_num 
+
+def main():
+    total_num_to_read = int(input("Enter how many numbers:"));
+    user_list =read_num(total_num_to_read);
+    min_num = find_min_num(user_list);
+    max_num = find_max_num(user_list);
+    print(f"Numbers: {user_list}");
+    print(f"Minimum: {min_num}");
+    print(f"Maximum: {max_num}");
+main();</pre>
+                        </div>
+                    </div>
+
+
+                    <div class="assignment-code">
+                        <div class="code-header">
+                            <h3>Python Practical 9: File Operations & Data Persistence</h3>
+                            <p>Python programs demonstrating file input/output operations, data persistence, and file
+                                management. Features creating, reading, and appending to text files with proper error
+                                handling, file existence checking, and user-friendly file operation menus.</p>
+                        </div>
+                        <div class="code-container">
+                            <pre class="code-block"># Practice 9.1 - File Operations Menu
+user = int(input("[1]Create a new file\n[2]Display file\n[3]Add a new item to the file\nEnter 1,2 or 3:"))
+
+if user == 1:
+    subject=input("Enter a subject:");
+    with open("Subject.txt","w") as file:
+        file.write(subject + "\n");
+    print("Project saved successfully.")
+    
+elif user == 2:
+    try:
+        with open("Subject.txt","r") as file:
+            content = file.read();
+        if content:
+            print("File contents:\n" + content)
+        else:
+            print("File is empty");
+    except FileNotFoundError:
+        print("File not found. Create one first.")
+        
+elif user == 3:
+    subject=input("Enter a new subject:");
+    with open("Subject.txt","a") as file:
+        file.write(subject + '\n');
+    print("Subject added successfully.")    
+    
+else:
+    print("Invalid Input!")</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                window.location.href = href;
+            });
+        });
+    </script>
+</body>
+
+</html>

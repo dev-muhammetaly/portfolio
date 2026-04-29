@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Assignments Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #080808;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .app-gallery {
+            padding: 80px 0;
+            background: #080808;
+        }
+
+        .app-gallery h1 {
+            font-size: 60px;
+            padding-bottom: 80px;
+            text-align: center;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 80px;
+        }
+
+        .screenshot-placeholder {
+            width: 90%;
+            height: 500px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            background: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .screenshot-placeholder:hover {
+            transform: scale(1.05);
+        }
+
+        .code-section {
+            margin-top: 60px;
+            padding: 40px 0;
+        }
+
+        .code-section h2 {
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .assignment-code {
+            background: #1a1a1a;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+
+        .code-header {
+            background: #2d2d2d;
+            padding: 20px;
+            border-bottom: 1px solid #333;
+        }
+
+        .code-header h3 {
+            margin: 0 0 10px 0;
+            color: #00ff88;
+            font-size: 24px;
+        }
+
+        .code-header p {
+            margin: 0;
+            color: #ccc;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .code-container {
+            max-height: 400px;
+            overflow-y: auto;
+            background: #0d1117;
+        }
+
+        .code-block {
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #e6edf3;
+            white-space: pre;
+            margin: 0;
+        }
+
+        .code-container::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .code-container::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+
+        .code-container::-webkit-scrollbar-thumb {
+            background: #444;
+            border-radius: 4px;
+        }
+
+        .code-container::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-gallery">
+        <h1>HTML, CSS and Javascript applications</h1>
+            <div class="code-section">
+                <div class="container">
+                    <div class="assignment-code">
+                        <div class="code-header">
+                            <h3> Basic HTML Structure</h3>
+                            <p>This HTML file demonstrates a basic webpage structure with headings, paragraphs, and lists. It includes Lorem Ipsum text, a contact number, and web design steps, showcasing fundamental HTML elements and content organization.</p>
+                        </div>
+                        <div class="code-container">
+                            <pre class="code-block">
+Hello World
+Heading level 1
+
+Heading level 2
+
+Heading level 3
+
+Heading level 4
+
+Heading level 5
+
+Heading level 6
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+    a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+    of Lorem Ipsum.
+
+
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+        been the
+        industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+        to
+        make
+        a type specimen book. It has survived not only five centuries, but also the leap into
+        electronic
+        typesetting,
+        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+        sheets
+        containing
+        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
+        versions
+        of Lorem Ipsum.
+
+
+Call for a free quote for your web development needs:
+888.555.5555
+
+1
+2
+3
+
+1
+2
+3
+
+    Lorem 1
+
+    It is a long established fact that a reader will be distracted by the readable content of a page when
+    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+    letters, as opposed to using 'Content here, content here', making it look like readable English. Many
+    desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
+    search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved
+    over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+    Lorem 2
+
+    It is a long established fact that a reader will be distracted by the readable content of a page when
+    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+    letters, as opposed to using 'Content here, content here', making it look like readable English. Many
+    desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
+    search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved
+    over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+    Lorem 3
+
+    It is a long established fact that a reader will be distracted by the readable content of a page when
+    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+    letters, as opposed to using 'Content here, content here', making it look like readable English. Many
+    desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
+    search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved
+    over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+copy rights reserved ©
+for space: &nbsp;
+long dash: —
+vertical bar: |
+
+Web design steps
+
+    determine the intende audince
+    ajfhsjklfhasjklfhasjkdfhajskdfhasjkhdfksadfhsjkadhfkasldfhasjkl
+
+    determine the goals of site
+    ajfhsjklfhasjklfhasjkdfhajskdfhasjkhdfksadfhsjkadhfkasldfhasjkl
+
+    determine the general content and create a site map
+    ajfhsjklfhasjklfhasjkdfhajskdfhasjkhdfksadfhsjkadhfkasldfhasjkl
+
+    sketch tanantive page layout
+    ajfhsjklfhasjklfhasjkdfhajskdfhasjkhdfksadfhsjkadhfkasldfhasjkl
+
+Copyright © 2019 My company. All rights reserved.
+Lorem ipsum
+
+Trillium Media design
+
+Home &nbsp; Service &nbsp; Contact
+
+New media and web design
+
+Trillium Media Design will bring your company's web presence to the next level. we offer a
+    comperhansive range of services
+
+Copyright © 2019 My company. All rights reserved.
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div class="assignment-code">
+                        <div class="code-header">
+                            <h3> Inline CSS and Web Design</h3>
+                            <p>This HTML file introduces inline CSS styling and presents a basic webpage for Trillium Media, including navigation links and a services list. It demonstrates the use of inline styles and basic content structuring for a business website.</p>
+                        </div>
+                        <div class="code-container">
+                            <pre class="code-block">
+inline css
+
+This paragraph inherits the styles applied to the body tag
+
+Trillium media
+
+Home &nbsp; Services &nbsp; Contact
+
+New Media and Web Design
+
+Trilldfksfjkghsdlkfghkldhfgskldhfgkljsdhfgjkhsdfkgjlhjsdfklghsjkdlfghjklsdhgjsdkfh
+
+    website
+
+    interactive
+
+    e-commerece
+
+    usability
+
+    search
+
+Meeting your business needs
+
+our expext designers are create and eager to work with you
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div class="assignment-code">
+                        <div class="code-header">
+                            <h3>: Simple HTML Page</h3>
+                            <p>This minimal HTML file contains a simple greeting, demonstrating the basic structure of an HTML document with minimal content.</p>
+                        </div>
+                        <div class="code-container">
+                            <pre class="code-block">
+hellow world
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div class="assignment-code">
+                        <div class="code-header">
+                            <h3> CSS Display Properties and Text Content</h3>
+                            <p>This HTML file explores CSS display properties (block and inline) and includes a lengthy Lorem Ipsum text section to demonstrate text content handling. It also includes a heading and a simple text block.</p>
+                        </div>
+                        <div class="code-container">
+                            <pre class="code-block">
+This is first box
+
+    This is the 
+    second box
+
+display: block
+
+display: block
+
+display: block
+
+display: inline
+
+display: inline
+
+display: inline
+
+display: inline
+
+display: block
+
+display: block
+
+display: block
+
+The Tiger
+
+Lorem Ipsum is simply dummy text of the printing and
+    typesetting industry. Lorem Ipsum has been the industry's
+    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+    a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+    of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+    the industry's
+    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+    a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+    of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+    the industry's
+    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+    a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+    of Lorem Ipsum.
+
+this is bla bla bla
+
+Lorem Ipsum
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div class="assignment-code">
+                        <div class="code-header">
+                            <h3> Flexbox Layouts</h3>
+                            <p>This HTML file demonstrates various Flexbox layouts, including tasks for default properties, wrapping, and item alignments. It showcases the use of CSS Flexbox for responsive and dynamic layouts.</p>
+                        </div>
+                        <div class="code-container">
+                            <pre class="code-block">
+Task 1: My Flexbox
+
+    First division.
+    Flex item 1.
+
+    Second division.
+    Flex item 2.
+
+    Third division.
+    Flex item 3.
+
+Task 2: Axes Illustrations
+
+    Item 1
+    Main Start
+
+    Item 2
+    Cross Start
+
+Task 3: Default Properties
+
+    First division.
+    Flex item 1.
+
+    I am making the Flex Item 2 larger and larger
+    Flex item 2.
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Flex item 3.
+
+Task 4: Flexbox Wrap
+
+    First division.
+    Flex item 1.
+
+    Second division.
+    Flex item 2.
+
+    Third division.
+    Flex item 3.
+
+    Fourth division.
+    Flex item 4.
+
+    Fifth division.
+    Flex item 5.
+
+    Sixth division.
+    Flex item 6.
+
+Task 5: Flex Property
+
+    Item 1
+
+    Item 2
+
+    Item 3
+
+    Item 4
+
+    Item 5
+
+    Item 1
+    Lorem ipsum...
+
+    Item 2
+    Lorem ipsum...
+
+    Item 3
+    Lorem ipsum...
+
+    Item 4
+    Lorem ipsum...
+
+    Item 5
+    Lorem ipsum...
+
+Task 6: Flex Item Alignments
+
+    Flex Item A
+
+    Flex Item B
+
+    Flex Item C
+
+    Flex Item D
+
+    Flex Item E
+
+    Flex Item A
+
+    Flex Item B
+
+    Flex Item C
+
+    Flex Item D
+
+    Flex Item E
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div class="assignment-code">
+                        <div class="code-header">
+                            <h3> HTML Tables</h3>
+                            <p>This HTML file includes multiple tasks demonstrating the use of HTML tables for educational background, food menus, timetables, and complex table layouts with colspan and rowspan attributes.</p>
+                        </div>
+                        <div class="code-container">
+                            <pre class="code-block">
+Task 1: Education Background
+
+Education History    Start-End    Level    Location    Award
+    Jan 2015 - Dec 2018    High School    City High    Diploma
+    Aug 2019 - May 2023    Bachelor's    University A    Degree
+
+Task 2: Colspan Test
+
+    Two Columns    One Column    One Column
+    Short    Medium Content    Longer Content Here    Another Cell
+
+Task 3: Food Menu
+
+Restaurant Menu    Category    Item    Price (RM)
+    Appetizers    Spring Rolls    8.00
+    Salad    6.00
+    Soup    5.00
+    Main Course    Chicken Rice    12.00
+    Fried Noodles    10.00
+
+Task 4: Timetable
+
+Weekly Timetable    Time    Tue    Wed    Thu    Fri
+    08:00 AM - 10:00 AM    English for Computer Technology Studies        Appreciation of Ethics and Civilisation    
+            Object-Oriented Programming Fundamentals    
+    10:00 AM - 12:00 PM                Computer Organisation
+    12:00 PM - 02:00 PM    Web Fundamentals            
+    02:00 PM - 04:00 PM        Object-Oriented Programming Fundamentals        
+        Computer Organisation        
+    04:00 PM - 06:00 PM            Web Fundamentals    English for Computer Technology Studies
+
+Task 5: Styled Menu with Pseudo-classes
+
+Styled Restaurant Menu    Category    Item    Price (RM)
+    Appetizers    Spring Rolls    8.00
+    Salad    6.00
+    Soup    5.00
+    Main Course    Chicken Rice    12.00
+    Fried Noodles    10.00
+
+Task 6: Styled Timetable
+
+Formatted Weekly Timetable    Time    Tue    Wed    Thu    Fri
+    08:00 AM - 10:00 AM    English for Computer Technology Studies        Appreciation of Ethics and Civilisation    
+            Object-Oriented Programming Fundamentals    
+    10:00 AM - 12:00 PM                Computer Organisation
+    12:00 PM - 02:00 PM    Web Fundamentals            
+    02:00 PM - 04:00 PM        Object-Oriented Programming Fundamentals        
+        Computer Organisation        
+    04:00 PM - 06:00 PM            Web Fundamentals    English for Computer Technology Studies
+
+Task 7: Table Model from Code
+
+Model Description: The table has a caption "New table" above it. The table consists of one row with three cells.
+    The first cell is empty, the second cell spans 2 columns and 2 rows with content "Block 1," the third cell is
+    "Block 2," and a fourth cell spans 2 rows with content "Block 3." The layout shifts the second row's cells due
+    to the rowspan, resulting in a 2x3 grid with merged cells at (1,2) and (1,4) positions.
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div class="assignment-code">
+                        <div class="code-header">
+                            <h3> E-commerce Registration Form</h3>
+                            <p>This HTML file creates a comprehensive e-commerce registration form with fields for personal, contact, and address information, as well as registration details. It demonstrates the use of form elements like select, radio buttons, and text inputs.</p>
+                        </div>
+                        <div class="code-container">
+                            <pre class="code-block">
+E-commerce Registration
+
+    Personal Information
+
+        Salutation:
+        Select...
+        Mr.
+        Ms.
+        Mrs.
+        Dr.
+        Prof.
+
+        First Name: *
+
+        Last Name: *
+
+        Date of Birth:
+
+        IC/Passport Number:
+
+    Contact Information
+
+        Email Address: *
+
+        Home Phone:
+
+        Mobile Phone: *
+
+        Preferred Contact Method:
+        Email
+        Phone
+        SMS
+
+    Address Information
+
+        Address Line 1: *
+
+        Address Line 2:
+
+        City: *
+
+        State/Province: *
+
+        Postal/Zip Code: *
+
+        Country:
+        Malaysia
+        Singapore
+        Thailand
+        Indonesia
+        Other
+
+    Registration Details
+
+        Purpose of Registration: *
+        Online Shopping
+        Business Account
+        Wholesale Purchasing
+        Newsletter
+        Subscription
+
+        Other Purpose (if not listed abovee):
+
+        How did you hear about us?
+        Select...
+        Search Engine
+        Social Media
+        Friend/Colleague Referral
+        Advertisement
+        Other
+
+    Register Account
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div class="assignment-code">
+                        <div class="code-header">
+                            <h3> JavaScript Integration</h3>
+                            <p>This HTML file includes tasks demonstrating JavaScript integration, such as embedding scripts, linking external scripts, handling user input, and form validation. It also includes a Node.js script example for non-browser JavaScript execution.</p>
+                        </div>
+                        <div class="code-container">
+                            <pre class="code-block">
+Task 1: Embedding JavaScript
+
+Before the script...
+
+After the first alert box...
+
+After the second alert box...
+
+Task 2: Linking JavaScript
+
+Create "myscript.js" with: alert("Hello, world");
+
+Task 3: Set and Get Values
+
+Something you can read
+
+Task 4: On-event Triggers
+
+Using on-event
+
+    Mouseover test
+    Mouseout test
+
+Click to change color
+
+Mini Challenge: Modify with counter (e.g., let count = 0; if count < 5, alert and increment, reset after 10)
+
+Task 5: Appending Lines to HTML
+
+Add Line
+
+Task 6: Getting User Input
+
+Task 7: Testing Non-in-browser JavaScript
+
+Create "node1.js" with: var a = 1; var b = 10; var sum = a + b; console.log("The sum is: " + sum);
+
+Install Node.js, navigate to the folder in Command Prompt, and run: node node1.js
+
+Task 8: Checking Your Form for Errors
+
+    First Name:
+
+    Last Name:
+
+    Address Line 1:
+
+    Address Line 2:
+
+    Student ID:
+
+    Course Taken in Sunway:
+
+    Date of Birth:
+
+    Email:
+
+    Mobile Number:
+
+    Postcode:
+
+    City:
+
+    Country:
+
+    Preferred Contact Method:
+    Select Method
+    Phone
+    Email
+    Post
+
+Submit
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

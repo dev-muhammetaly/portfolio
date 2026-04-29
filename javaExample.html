@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Java Programming Assignments</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #080808;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .app-gallery {
+            padding: 80px 0;
+            background: #080808;
+        }
+
+        .app-gallery h1 {
+            font-size: 60px;
+            padding-bottom: 80px;
+            text-align: center;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 80px;
+        }
+
+        .gallery-grid img {
+            width: 90%;
+            height: 500px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            background: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        .screenshot-placeholder {
+            width: 90%;
+            height: 500px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            background: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .screenshot-placeholder:hover {
+            transform: scale(1.05);
+        }
+
+        .code-section {
+            margin-top: 60px;
+            padding: 40px 0;
+        }
+
+        .code-section h2 {
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .assignment-code {
+            background: #1a1a1a;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+
+        .code-header {
+            background: #2d2d2d;
+            padding: 20px;
+            border-bottom: 1px solid #333;
+        }
+
+        .code-header h3 {
+            margin: 0 0 10px 0;
+            color: #00ff88;
+            font-size: 24px;
+        }
+
+        .code-header p {
+            margin: 0;
+            color: #ccc;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .code-container {
+            max-height: 400px;
+            overflow-y: auto;
+            background: #0d1117;
+        }
+
+        .code-block {
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #e6edf3;
+            white-space: pre;
+            margin: 0;
+        }
+
+        .code-container::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .code-container::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+
+        .code-container::-webkit-scrollbar-thumb {
+            background: #444;
+            border-radius: 4px;
+        }
+
+        .code-container::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app-gallery">
+        <div class="container">
+            <h1>Java Programming examples</h1>
+
+            <div class="code-section">
+                <div class="container">
+
+                    <div class="assignment-code">
+                        <div class="code-header">
+                            <h3>Assignment 1: Car Rental Cost Calculator</h3>
+                            <p>This Java program uses JOptionPane to create a GUI-based car rental cost calculator. It
+                                calculates rental costs for three car types (Compact $30.50/day, Sedan $50/day, SUV
+                                $80.96/day) with different time periods (Day, Week with 15% discount, Month with 30%
+                                discount). The program uses nested switch statements for logic control and Math.round()
+                                for cost display.</p>
+                        </div>
+                        <div class="code-container">
+                            <pre class="code-block">import javax.swing.*;
+import java.text.*;
+
+public class Assignmen_3 {
+
+    public static void main(String[] args) {
+        Integer cartype = Integer
+                .parseInt(JOptionPane.showInputDialog(null, "For compact-1\nFor sedan-2\nFor SUV-3", "1,2 or 3"));
+        Integer time = Integer
+                .parseInt(JOptionPane.showInputDialog(null, "For Day-1\nFor Week-2\nFor Month-3", "1,2 or 3"));
+        switch (cartype) {
+        case 1:
+            switch (time) {
+            case 1:
+                double c_d = 30.50;
+                JOptionPane.showMessageDialog(null, "total cost:$" + Math.round(c_d));
+                break;
+            case 2:
+                double c_w = 30.50*7*(1-0.15);
+                JOptionPane.showMessageDialog(null, "total cost:$" +Math.round(c_w));
+                break;
+            case 3:
+                double c_m = 30.50*30*(1-0.30);
+                JOptionPane.showMessageDialog(null, "total cost:$" + Math.round(c_m));
+                break;
+            default :
+                JOptionPane.showMessageDialog(null,"You didn't enter 1,2 or 3 for 2 nd question");
+                break;
+            }
+            break;
+        case 2:
+            switch (time) {
+            case 1:
+                double s_d = 50;
+                JOptionPane.showMessageDialog(null, "total cost:$" + Math.round(s_d));
+                break;
+            case 2:
+                double s_w = 50*7*(1-0.15);
+                JOptionPane.showMessageDialog(null, "total cost:$" + Math.round(s_w));
+                break;
+            case 3:
+                double s_m = 50*30*(1-0.30);
+                JOptionPane.showMessageDialog(null, "total cost:$" + Math.round(s_m));
+                break;
+            default :
+                JOptionPane.showMessageDialog(null,"You didn't enter 1,2 or 3 for 2 nd question");
+                break;
+            }
+            break;
+        case 3:
+            switch (time) {
+            case 1:
+                double S_d = 80.96;
+                JOptionPane.showMessageDialog(null, "total cost:$" + Math.round(S_d));
+                break;
+            case 2:
+                double S_w = 80.96*7*(1-0.15);
+                JOptionPane.showMessageDialog(null, "total cost:$" + Math.round(S_w));
+                break;
+            case 3:
+                double S_m = 80.96*30*(1-0.30);
+                JOptionPane.showMessageDialog(null, "total cost:$" + Math.round(S_m));
+                break;
+            default :
+                JOptionPane.showMessageDialog(null,"You didnt enter 1,2 or 3 for 2 nd question");
+                break;
+            }
+            break;
+        default:
+            JOptionPane.showMessageDialog(null, "You didn't enter 1,2 or 3");
+        }
+    }
+}</pre>
+                        </div>
+                    </div>
+
+                    <div class="assignment-code">
+                        <div class="code-header">
+                            <h3>Assignment 2: Student Attendance & Assignment Checker</h3>
+                            <p>This console-based Java program validates student eligibility for exams. It calculates
+                                attendance percentage from total and attended classes, validates assignment scores, and
+                                checks if students meet exam criteria (75% minimum attendance and 50+ assignment score).
+                                The program also verifies the accuracy of manually entered total assignment scores.</p>
+                        </div>
+                        <div class="code-container">
+                            <pre class="code-block">import java.util.Scanner;
+
+public class Assignment_1 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Total number of classes:");
+        double tnc = input.nextInt();
+        System.out.print("Number of classes attended:");
+        double nac = input.nextInt();
+        System.out.print("Score of 1 assignment:");
+        double asg1 = input.nextDouble();
+        System.out.print("Score of 2 assignment:");
+        double asg2 = input.nextDouble();
+        System.out.print("Score of 3 assignment:");
+        double asg3 = input.nextDouble();
+        System.out.print("Score of total assignment:");
+        double total = input.nextDouble();
+        
+        //calculation start
+        double attendence = nac/tnc*100;
+        double Total = asg1 +asg2 + asg3;
+        
+        if (Total == total)
+            if (attendence < 75.0) {
+                System.out.print("You can't enter to exam with less than 75% attedence");
+            } else if (total < 50) {
+                System.out.print("You can't enter exam to exam with less than 50 score of assignment");
+            } else {
+                System.out.print("You can enter exam kudos!");
+            }
+        else {
+            System.out.print("You total score of assignment is not true!");
+        }
+        
+        input.close();
+    }
+}</pre>
+                        </div>
+                    </div>
+
+                    <!-- Assignment 3 Code -->
+                    <div class="assignment-code">
+                        <div class="code-header">
+                            <h3>Assignment 3: Basic Calculator Application</h3>
+                            <p>This console calculator performs five arithmetic operations (addition, subtraction,
+                                multiplication, division, remainder) using a switch-case menu system. It includes proper
+                                error handling for division by zero scenarios and uses double precision for accurate
+                                calculations. The program provides user-friendly operation selection and graceful exit
+                                functionality.</p>
+                        </div>
+                        <div class="code-container">
+                            <pre class="code-block">import java.util.Scanner;
+
+public class Assinment_2 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter num 1:");
+        double num_1 = input.nextDouble();
+        System.out.print("Enter num 2:");
+        double num_2 = input.nextDouble();
+        System.out.print(
+                "For addition:1\nFor substraction:2\nFor multiplication:3\nFor division:4\nFor remainder:5\nEnter number:");
+        int operation = input.nextInt();
+        
+        switch (operation) {
+        case 1:
+            double addition = num_1 + num_2;
+            System.out.print("Answer:" + addition);
+            break;
+        case 2:
+            double substraction = num_1 - num_2;
+            System.out.print("Answer:" + substraction);
+            break;
+        case 3:
+            double multipiclation = num_1 * num_2;
+            System.out.print("Answer:" + multipiclation);
+            break;
+        case 4:
+            if (num_2 == 0) {
+                System.out.print("Error!!!");
+            } else {
+                double divison = num_1 / num_2;
+                System.out.print("Answer:" + divison);
+            }
+            break;
+        case 5:
+            if (num_2 == 0) {
+                System.out.print("Error!!!");
+            } else {
+                double remainder = num_1 % num_2;
+                System.out.print("Answer:" + remainder);
+            }
+            break;
+        default:
+            System.out.print("Bye");
+            break;
+        }
+    }
+}</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                window.location.href = href;
+            });
+        });
+    </script>
+</body>
+
+</html>
