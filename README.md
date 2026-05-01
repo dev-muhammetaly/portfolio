@@ -20,7 +20,7 @@ A responsive, multi-page personal portfolio website built with HTML, CSS, and Ja
 
 ## 🚀 Live Demo
 You can view the live version of this portfolio at:  
-[https://dev-muhammetaly.github.io/portfolio](https://dev-muhammetaly.github.io/portfolio) (Coming soon!)
+[https://dev-muhammetaly.github.io/portfolio](https://dev-muhammetaly.github.io/portfolio)
 
 ## 👨‍💻 Author
 **Muhammetaly Annageldiyew**  
