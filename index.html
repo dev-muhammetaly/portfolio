@@ -1,146 +1,178 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Muhammetaly_Portfolio</title>
+    <title>Muhammetaly Annageldiyew | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="tab.js" defer></script>
 </head>
 
 <body>
+    <!-- --------------------Header / Home-------------------- -->
     <div class="home" id="header">
         <div class="container">
             <nav>
+                <div class="nav-logo">MA</div>
                 <ul>
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about-me">About Me</a></li>
-                    <li><a href="#experiences">Experiences</a></li>
+                    <li><a href="#experiences">Projects</a></li>
                     <li><a href="#education">Education</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
                     <li><a href="#goals">Goals</a></li>
-                    <li><a href="#contact-me">Contact me</a></li>
+                    <li><a href="#contact-me">Contact</a></li>
                 </ul>
             </nav>
             <div class="header_text">
-                <p>Web developer</p>
-                <h1>Hi, I'm <span>Muhammetaly</span><br> from BIT course</h1>
+                <p>Information Technology Student</p>
+                <h1>Hi, I'm <span>Muhammetaly</span><br> from Sunway University</h1>
             </div>
         </div>
     </div>
+
     <!-- --------------------About Me-------------------- -->
     <div class="about-me" id="about-me">
         <div class="row">
             <div class="about-column-1">
-                <img src="images/user.png" alt="User Image">
+                <img src="images/user.png" alt="Muhammetaly Annageldiyew">
             </div>
             <div class="about-column-2">
                 <h1>About Me</h1>
-                <p>My name is Muhammetaly, and I am a dedicated front-end and mobile developer with a strong foundation
-                    in HTML, CSS, and JavaScript, as well as intermediate proficiency in Flutter for cross-platform app
-                    development. I also have basic experience with Python and Java, which support my broader
-                    understanding of programming concepts. While I am currently expanding my knowledge in backend
-                    development, my primary focus is on creating responsive, user-friendly interfaces and continuously
-                    refining my technical skills to build impactful digital solutions.</p>
-                <h1>Skills</h1>
+                <p class="about-desc">I am an Information Technology student with hands-on experience building Flutter mobile applications and a working foundation in networking and backend concepts. Seeking an internship in software or mobile development to apply existing skills, contribute to real projects, and grow within a collaborative technical team. Comfortable learning independently and applying new technologies to practical problems.</p>
+                
+                <h1>Core Competencies</h1>
                 <div class="skills-grid">
                     <div class="skill-item">
-                        <div class="skill-icon">🌐</div>
-                        <p>Web Development: Proficient in HTML, CSS, and JavaScript, with experience in designing
-                            responsive and user-friendly web interfaces, as demonstrated by this portfolio website.</p>
-                    </div>
-                    <div class="skill-item">
                         <div class="skill-icon">📱</div>
-                        <p>App Development: Intermediate skills in Flutter, with practical experience in building
-                            cross-platform mobile applications, such as a restaurant menu app.</p>
+                        <h3>Mobile Development</h3>
+                        <p>Flutter, Dart (UI development, state management with Riverpod)</p>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-icon">☕</div>
-                        <p>Java: Basic knowledge of Java, with experience in writing foundational code to support
-                            broader programming concepts.</p>
+                        <div class="skill-icon">🖥️</div>
+                        <h3>Backend Fundamentals</h3>
+                        <p>HTTP, REST APIs, JWT authentication, idempotency, statelessness</p>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-icon">🐍</div>
-                        <p>Python: Basic proficiency in Python, applied to simple programming tasks and projects to
-                            enhance my development skills.</p>
+                        <div class="skill-icon">💾</div>
+                        <h3>Database Experience</h3>
+                        <p>Firebase Realtime Database (NoSQL)</p>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-icon">🗣️</div>
-                        <p>Multilingual: Fluent in Turkmen, Turkish, Russian, and English, enabling effective
-                            communication in diverse environments.</p>
+                        <div class="skill-icon">🌐</div>
+                        <h3>Web Basics</h3>
+                        <p>HTML, CSS, basic PHP</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🔌</div>
+                        <h3>Networking</h3>
+                        <p>TCP/IP, VLANs, trunking, EtherChannel/LACP, Spanning Tree (Cisco coursework, intermediate level)</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🛠️</div>
+                        <h3>Tools & Languages</h3>
+                        <p>Git, GitHub | Turkmen (native), Turkish, Russian, English</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- --------------------Experiences-------------------- -->
+
+    <!-- --------------------Projects / Experiences-------------------- -->
     <div class="experiences" id="experiences">
         <div class="container">
-            <h1>Experiences</h1>
-            <div class="experience-grid"
-                style="grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, auto);">
+            <h1>Relevant Projects</h1>
+            <div class="experience-grid">
                 <div class="experience-card">
-                    <div class="experience-icon">🌐</div>
-                    <h3><a href="https://github.com/dev-muhammetaly/gig-launch-php"> Web Developer</a></h3>
-                    <p class="company">Sunway University</p>
-                    <p class="description">Acquired foundational PHP and MySQL skills, developing GigLaunch—a professional job board platform.</p>
+                    <div class="experience-icon">🛒</div>
+                    <h3>Shopping List App</h3>
+                    <p class="company">Flutter, Dart, Firebase, HTTP</p>
+                    <p class="description">Integrated a Flutter front end with Firebase Realtime Database using REST-based HTTP calls, enabling real-time data synchronization. Implemented category-based organization and error/loading states.</p>
                 </div>
                 <div class="experience-card">
-                    <div class="experience-icon">📱</div>
-                    <h3><a href="https://github.com/dev-muhammetaly/menu_app">Mobile App Developer</a></h3>
-                    <p class="company">Freelance</p>
-                    <p class="description">Developed a restaurant menu app using Flutter, focusing on cross-platform
-                        compatibility and user experience.</p>
+                    <div class="experience-icon">🍔</div>
+                    <h3>Meals App</h3>
+                    <p class="company">Flutter, Dart, Riverpod</p>
+                    <p class="description">Developed a meal browsing application with category navigation and detailed recipe views. Implemented custom dietary filtering using Riverpod for robust cross-screen state management.</p>
                 </div>
                 <div class="experience-card">
-                    <div class="experience-icon">☕</div>
-                    <h3><a href="https://github.com/dev-muhammetaly">Junior Java Developer</a></h3>
-                    <p class="company">Sunway University</p>
-                    <p class="description">Contributed to basic Java coding tasks to support application development and
-                        testing.</p>
+                    <div class="experience-icon">💰</div>
+                    <h3>Expense Tracker</h3>
+                    <p class="company">Flutter, Dart</p>
+                    <p class="description">Built a cross-platform application to log and categorize daily expenses. Features a responsive, modern Material Design 3 interface optimized for both mobile and tablet displays.</p>
                 </div>
                 <div class="experience-card">
-                    <div class="experience-icon">🐍</div>
-                    <h3><a href="https://github.com/dev-muhammetaly">Python Developer</a></h3>
-                    <p class="company">Self-Taught</p>
-                    <p class="description">Basic proficiency in Python, applied to simple programming tasks and projects
-                        to enhance my development skills.</p>
+                    <div class="experience-icon">📥</div>
+                    <h3>HTTP Requesting App</h3>
+                    <p class="company">Flutter, Dart, REST API</p>
+                    <p class="description">Built an application to fetch and parse live JSON data from a public REST API. Implemented asynchronous request handling using async/await with custom loading and error UI states.</p>
                 </div>
             </div>
+            <p class="projects-note">All projects were developed independently while learning Flutter through Academind (Maximilian Schwarzmüller) and reinforced through university mobile development coursework.</p>
         </div>
     </div>
+
     <!-- --------------------Education-------------------- -->
     <div class="education" id="education">
         <div class="container">
             <h1>Education</h1>
             <div class="education-grid">
                 <div class="education-card">
+                    <div class="education-icon">🎓</div>
+                    <h3>Bachelor of Information Technology (BIT)</h3>
+                    <p class="description"><strong>Sunway University</strong> (Kuala Lumpur, Malaysia)<br>Jan 2025 – Present</p>
+                </div>
+                <div class="education-card">
                     <div class="education-icon">🏫</div>
-                    <h3><a href="https://sunwayuniversity.edu.my">Sunway University</a></h3>
-                    <p class="description">Studying <a
-                            href="https://sunwayuniversity.edu.my/school-of-computing-and-artificial-intelligence/courses/bachelor-of-science-honours-information">BIT</a>
-                        course with a focus on web and mobile development.</p>
+                    <h3>Foundation in Science and Technology</h3>
+                    <p class="description"><strong>Sunway University</strong> (Kuala Lumpur, Malaysia)<br>Sep 2023 – Dec 2024</p>
                 </div>
                 <div class="education-card">
                     <div class="education-icon">📚</div>
-                    <h3><a
-                            href="https://sunwayuniversity.edu.my/school-of-computing-and-artificial-intelligence/courses/bachelor-of-science-honours-information">Dana
-                            Education Center</a>
-                    </h3>
-                    <p class="description">Completed Python programming course in Turkmenistan.</p>
+                    <h3>Python Programming Course</h3>
+                    <p class="description"><strong>Dana Education Center</strong> (Turkmenistan)<br>Completed foundational Python training.</p>
                 </div>
                 <div class="education-card">
-                    <div class="education-icon">🎥</div>
-                    <h3> <a href="https://www.youtube.com/@FlutterMapp">Youtube Channel</a></h3>
-                    <p class="description">Self-taught Flutter language through online tutorials.</p>
-                </div>
-                <div class="education-card">
-                    <div class="education-icon">👨‍🏫</div>
-                    <h3> <a href="https://en.wikipedia.org/wiki/HTML5">Special Tutor</a> </h3>
-                    <p class="description">Learned HTML and CSS through personalized tutoring.</p>
+                    <div class="education-icon">👨‍💻</div>
+                    <h3>Self-Taught Mobile & Web</h3>
+                    <p class="description">Completed intensive Academind Flutter coursework and web tutoring to master responsive frontend development.</p>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- --------------------Involvement & Achievements-------------------- -->
+    <div class="achievements" id="achievements">
+        <div class="container">
+            <h1>Involvement & Achievements</h1>
+            <div class="achievements-grid">
+                <div class="achievements-card">
+                    <div class="achievements-icon">👥</div>
+                    <h3>Department Representative</h3>
+                    <p class="company">Faculty of Engineering and Technology (FET)</p>
+                    <p class="description">Liaised between the student body and faculty administration to represent student interests and facilitate academic feedback (2025 – 2026).</p>
+                </div>
+                <div class="achievements-card">
+                    <div class="achievements-icon">🎖️</div>
+                    <h3>Sunway University FET Rep</h3>
+                    <p class="company">Academic Representation</p>
+                    <p class="description">Recognized for student leadership role and administrative service at Sunway University.</p>
+                </div>
+                <div class="achievements-card">
+                    <div class="achievements-icon">📜</div>
+                    <h3>Career Peer Workshop</h3>
+                    <p class="company">Participation Certificate</p>
+                    <p class="description">Delivered a group persuasive presentation addressing AI-literacy gaps in university preparation for the workplace.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- --------------------Goals-------------------- -->
     <div class="goals" id="goals">
         <div class="container">
@@ -149,52 +181,58 @@
                 <div class="goals-card">
                     <div class="goals-icon">💻</div>
                     <h3>Full-Stack Developer</h3>
-                    <p class="description">Aim to become a professional full-stack app developer with expertise in both
-                        front-end and back-end technologies.</p>
+                    <p class="description">Aim to become a professional full-stack app developer with expertise in both front-end and back-end technologies.</p>
                 </div>
                 <div class="goals-card">
                     <div class="goals-icon">🏢</div>
                     <h3>App Development Company</h3>
-                    <p class="description">Plan to establish an app development company with a team of skilled
-                        developers.</p>
+                    <p class="description">Plan to establish an app development company with a team of skilled developers.</p>
                 </div>
                 <div class="goals-card">
-                   <div class="goals-icon">📱</div>
-                <h3>Publish a Successful Mobile App</h3>
-                <p class="description">Plan to develop and publish a mobile app on both iOS and Android platforms, aiming to reach at least 10,000 downloads within the first year.</p>
+                    <div class="goals-icon">📱</div>
+                    <h3>Publish a Successful Mobile App</h3>
+                    <p class="description">Plan to develop and publish a mobile app on both iOS and Android platforms, aiming to reach at least 10,000 downloads within the first year.</p>
                 </div>
                 <div class="goals-card">
-                   <div class="goals-icon">🌐</div>
-                <h3>Developer Network</h3>
-                <p class="description">Plan to build a strong professional network by collaborating on open-source projects and connecting with other developers through GitHub, LinkedIn, and tech events.</p>
+                    <div class="goals-icon">🌐</div>
+                    <h3>Developer Network</h3>
+                    <p class="description">Plan to build a strong professional network by collaborating on open-source projects and connecting with other developers through GitHub, LinkedIn, and tech events.</p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- --------------------Contact-------------------- -->
-<div class="contact-me" id="contact-me">
-    <h1>Contact Me</h1>
-    <div class="contact-info">
-        <div class="contact-item">
-            <span class="contact-icon">📧</span>
-            <p>Muhammetaly Annageldiyew</p>
-        </div>
-        <div class="contact-item">
-            <span class="contact-icon">📞</span>
-            <p>+60173608323</p>
-        </div>
-    </div>
-    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="2c7bf126-0a0d-4e1c-b1c8-e70b796e5138">
-        <input type="text" name="Name" placeholder="Your Name" class="Contact-inputs" required>
-        <input type="email" name="Email" placeholder="Your Email" class="Contact-inputs" required>
-        <textarea name="Message" placeholder="Enter your message" class="Contact-inputs" required></textarea>
-        <div class="form-buttons">
-            <button type="submit">Submit</button>
-            <button type="reset">Reset</button>
-        </div>
-    </form>
-</div>
-</body>
 
+    <!-- --------------------Contact-------------------- -->
+    <div class="contact-me" id="contact-me">
+        <h1>Contact Me</h1>
+        <div class="contact-info">
+            <div class="contact-item">
+                <span class="contact-icon">📧</span>
+                <p><a href="mailto:muhammetaly.77a@gmail.com">muhammetaly.77a@gmail.com</a></p>
+            </div>
+            <div class="contact-item">
+                <span class="contact-icon">📞</span>
+                <p><a href="tel:+60173608323">+60 17-360 8323</a></p>
+            </div>
+            <div class="contact-item">
+                <span class="contact-icon">💼</span>
+                <p><a href="https://linkedin.com/in/muhammetaly-annageldiyew-497608351" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></p>
+            </div>
+            <div class="contact-item">
+                <span class="contact-icon">🐙</span>
+                <p><a href="https://github.com/dev-muhammetaly" target="_blank" rel="noopener noreferrer">GitHub Profile</a></p>
+            </div>
+        </div>
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="2c7bf126-0a0d-4e1c-b1c8-e70b796e5138">
+            <input type="text" name="Name" placeholder="Your Name" class="Contact-inputs" required>
+            <input type="email" name="Email" placeholder="Your Email" class="Contact-inputs" required>
+            <textarea name="Message" placeholder="Enter your message" class="Contact-inputs" required></textarea>
+            <div class="form-buttons">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
 </html>
