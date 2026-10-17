@@ -1,27 +1,21 @@
-# 🎨 Personal Portfolio Website
+# Personal Portfolio
 
-A responsive, multi-page personal portfolio website built with HTML, CSS, and JavaScript. This project showcases my skills, experience, and projects as a BIT student at Sunway University.
+My portfolio website, built with HTML, CSS and JavaScript. It introduces me, shows my skills and projects, and provides a contact form.
 
-## 📸 Preview
+[Visit the portfolio](https://dev-muhammetaly.github.io/portfolio)
 
-> _Add a link to the live website here or drag a screenshot into this README_
+## Run locally
 
-## ✨ Features
-- **Responsive Design:** Fully responsive layout that works on mobile, tablet, and desktop.
-- **Dynamic Content:** Showcases my web development, mobile app development, and programming skills.
-- **Project Showcase:** Links directly to my GitHub repositories for practical examples of my work.
-- **Contact Form:** Integrated with Web3Forms for direct communication.
-- **Multi-lingual:** Highlights my fluency in Turkmen, Turkish, Russian, and English.
+Clone or download the repository and open `index.html` in a browser. You can also serve the folder with a local web server:
 
-## 🛠️ Tech Stack
-- **HTML5:** Semantic structure.
-- **CSS3:** Custom styling with Flexbox, Grid, and Media Queries.
-- **JavaScript:** Interactive components.
+```sh
+python -m http.server 8000
+```
 
-## 🚀 Live Demo
-You can view the live version of this portfolio at:  
-[https://dev-muhammetaly.github.io/portfolio](https://dev-muhammetaly.github.io/portfolio)
+Then open `http://localhost:8000`. There is no package installation or build step.
 
-## 👨‍💻 Author
-**Muhammetaly Annageldiyew**  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/muhammetaly-annageldiyew-497608351)
+## Editing the site
+
+Start with `index.html` for the main page. The repository also contains separate project/example pages.
+
+The contact form uses Web3Forms. If you reuse the site, configure the form for your own account and update the personal details and links.
