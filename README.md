@@ -1,21 +1,28 @@
 # Personal Portfolio
 
-My portfolio website, built with HTML, CSS and JavaScript. It introduces me, shows my skills and projects, and provides a contact form.
+My portfolio website, built with HTML, CSS and JavaScript. It brings together my current projects, technical skills, education and student involvement.
 
-[Visit the portfolio](https://dev-muhammetaly.github.io/portfolio)
+[Visit the portfolio](https://dev-muhammetaly.github.io/portfolio/)
+
+## On the site
+
+- Nextrole, Restaurant App, UniPlan and GigLaunch, with source links and available demos
+- A Nextrole interface preview using fictional records
+- Technical skills, technology logos, education and student involvement
+- Contact links and a Web3Forms contact form
 
 ## Run locally
 
-Clone or download the repository and open `index.html` in a browser. You can also serve the folder with a local web server:
+Open `index.html` in a browser, or serve the folder:
 
 ```sh
 python -m http.server 8000
 ```
 
-Then open `http://localhost:8000`. There is no package installation or build step.
+Visit `http://localhost:8000`. There is no package installation or build step.
 
-## Editing the site
+## Editing
 
-Start with `index.html` for the main page. The repository also contains separate project/example pages.
+`index.html` contains the content, `style.css` handles the responsive layout, and `tab.js` handles navigation and reveal effects. The site remains readable without JavaScript.
 
-The contact form uses Web3Forms. If you reuse the site, configure the form for your own account and update the personal details and links.
+The contact form uses Web3Forms. If you reuse the site, configure your own account and replace the personal details and links. The Nextrole preview is loaded from its public GitHub repository.
